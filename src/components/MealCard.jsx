@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styles from './MealCard.module.css'
 export default function MealCard(props){
 
