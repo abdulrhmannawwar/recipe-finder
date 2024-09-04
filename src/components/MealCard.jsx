@@ -1,10 +1,9 @@
+/* eslint-disable react/prop-types */
 import styles from "./MealCard.module.css";
-import PropTypes from "prop-types";
-
 export default function MealCard(props) {
     return (
         <div className={styles.card}>
-            <img src={props.src} alt={props.name} />
+            <img src={props.src} />
             <div className={styles.text}>
                 <h1>{props.name}</h1>
                 <h3>Ingredients :</h3>
@@ -19,9 +18,3 @@ export default function MealCard(props) {
         </div>
     );
 }
-
-MealCard.propTypes = {
-    src: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
