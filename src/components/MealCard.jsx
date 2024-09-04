@@ -1,5 +1,5 @@
-import styles from './MealCard.module.css'
-import PropTypes from 'prop-types'
+import styles from "./MealCard.module.css";
+import PropTypes from "prop-types";
 
 export default function MealCard(props) {
     return (
@@ -10,16 +10,18 @@ export default function MealCard(props) {
                 <h3>Ingredients :</h3>
                 <ul>
                     {props.ingredients.map((item, i) => (
-                        <li className={styles.list} key={i}>{item}</li>
+                        <li className={styles.list} key={i}>
+                            {item}
+                        </li>
                     ))}
                 </ul>
             </div>
         </div>
-    )
+    );
 }
 
 MealCard.propTypes = {
     src: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
-}
+};
